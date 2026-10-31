@@ -819,6 +819,65 @@ summary:focus-visible {
 .contact a:focus-visible {
   outline-color: #f0d49c;
 }
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-buttons svg,
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.contact .whatsapp-button {
+  background: #176b3a;
+  border-color: #83c99e;
+  color: #ffffff;
+}
+
+.contact .whatsapp-button:hover {
+  background: #10532c;
+  color: #ffffff;
+}
+
+.contact-help {
+  margin-top: 15px;
+}
+
+.social-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  color: #fff8e9;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  transition: background .2s;
+}
+
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
   </style>
 </head>
 
@@ -1023,67 +1082,128 @@ summary:focus-visible {
       </details>
     </section>
 
-    <section class="container" id="contact">
-      <div class="contact">
-        <div>
-          <span class="eyebrow">মিষ্টি কিছু হোক, কথা শুরু হোক</span>
-          <h2>আপনার আনন্দের দিনের<br>কেক নিয়ে কথা বলি!</h2>
+<section class="container" id="contact">
+  <div class="contact">
+    <!-- LEFT SECTION: All existing content preserved -->
+    <div>
+      <span class="eyebrow">মিষ্টি কিছু হোক, কথা শুরু হোক</span>
+      <h2>আপনার আনন্দের দিনের<br>কেক নিয়ে কথা বলি!</h2>
 
-          <p>
-            কী উপলক্ষ, কবে চাই আর কেমন ডিজাইন ভাবছেন —
-            আমাদের জানান। বাকি বিষয় একসঙ্গে ঠিক করে নেব।
-          </p>
+      <p>
+        কী উপলক্ষ, কবে চাই আর কেমন ডিজাইন ভাবছেন —
+        আমাদের জানান। বাকি বিষয় একসঙ্গে ঠিক করে নেব।
+      </p>
 
-          <address>
-            <strong>আন্তরিক বেকারি · Antarik Bakery</strong><br>
-            ফালাকাটা, আলিপুরদুয়ার<br>
-            পশ্চিমবঙ্গ, ভারত
-            <span class="english-subtitle" lang="en">
-              Falakata, Alipurduar, West Bengal, India
-            </span>
-          </address>
+      <address>
+        <strong>আন্তরিক বেকারি · Antarik Bakery</strong><br>
+        ফালাকাটা, আলিপুরদুয়ার<br>
+        পশ্চিমবঙ্গ, ভারত
+        <span class="english-subtitle" lang="en">
+          Falakata, Alipurduar, West Bengal, India
+        </span>
+      </address>
 
-          <a class="map-link"
-            href="https://share.google/coWrwUVeXYoAxEWWk"
-            target="_blank" rel="noopener noreferrer">
-            Google Maps-এ ফালাকাটা দেখুন ↗
+      <a class="map-link"
+        href="https://share.google/coWrwUVeXYoAxEWWk"
+        target="_blank" rel="noopener noreferrer">
+        Google Maps-এ দেখুন ↗
+      </a>
+
+      <p style="font-size:12px">
+        ম্যাপে এলাকার অবস্থান দেখানো হয়েছে।
+        আমাদের সঠিক ঠিকানার জন্য যোগাযোগ করুন।
+      </p>
+    </div>
+
+    <!-- RIGHT SECTION: Phone, WhatsApp and social links -->
+    <div class="contact-box">
+      <small>ফোন / কেকের অর্ডার সম্পর্কে জানতে</small>
+
+      <strong class="phone-display" id="phone-display">
+        +919883771994
+      </strong>
+
+      <div class="contact-buttons">
+        <a class="button" id="call-button" href="tel:+919883771994">
+          ফোন করুন ↗
+        </a>
+
+        <a
+          class="button whatsapp-button"
+          href="https://wa.me/919883771994?text=Hello%20Antarik%20Bakery!%20I%20would%20like%20to%20enquire%20about%20a%20cake."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M20.52 3.48A11.89 11.89 0 0 0 12.05 0C5.47 0 .11 5.35.1 11.93c0 2.1.55 4.15 1.6 5.96L0 24l6.26-1.64a11.95 11.95 0 0 0 5.78 1.47h.01C18.63 23.83 24 18.48 24 11.9a11.85 11.85 0 0 0-3.48-8.42ZM12.05 21.8a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.97.99-3.63-.24-.37a9.87 9.87 0 0 1-1.51-5.25c0-5.47 4.46-9.92 9.93-9.92a9.85 9.85 0 0 1 7.02 2.91 9.85 9.85 0 0 1 2.9 7.02c0 5.47-4.46 9.92-9.97 9.86Zm5.45-7.43c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.8-1.49-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.3 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/>
+          </svg>
+          WhatsApp-এ কথা বলুন
+        </a>
+      </div>
+
+      <small id="phone-note" class="contact-help">
+        Contact us to confirm the final price, availability and collection or delivery arrangements.
+      </small>
+
+      <div class="social-section">
+        <small>আমাদের সঙ্গে যুক্ত থাকুন</small>
+
+        <div class="social-links">
+          <!-- Replace with your actual Facebook page link -->
+          <a
+            class="social-link"
+            href="https://www.facebook.com/p/Antarik-Bakery-61572442528197/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Antarik Bakery on Facebook"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+                d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.095 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.026 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.49 0-1.956.93-1.956 1.885v2.266h3.328l-.532 3.49h-2.796V24C19.612 23.095 24 18.1 24 12.073Z"/>
+            </svg>
+            <span>Facebook</span>
           </a>
 
-          <p style="font-size:12px">
-            ম্যাপে এলাকার অবস্থান দেখানো হয়েছে।
-            আমাদের সঠিক ঠিকানার জন্য যোগাযোগ করুন।
-          </p>
-        </div>
-
-        <div class="contact-box">
-          <small>ফোন / কেকের অর্ডার সম্পর্কে জানতে</small>
-
-          <strong class="phone-display" id="phone-display">
-            +919883771994
-          </strong>
-
-          <a class="button" id="call-button" hidden>
-            ফোন করুন ↗
+          <!-- Replace with your actual Instagram profile link -->
+          <a
+            class="social-link"
+            href="https://www.instagram.com/antarikbakery"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Antarik Bakery on Instagram"
+          >
+            <svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8"
+              aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1"
+                fill="currentColor" stroke="none"/>
+            </svg>
+            <span>Instagram</span>
           </a>
         </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Visible English content helps English-speaking visitors too. -->
-      <section class="english-summary" lang="en"
-        aria-labelledby="english-heading">
-        <h2 id="english-heading">
-          Antarik Bakery — Homemade Cakes in Falakata, Alipurduar
-        </h2>
-        <p>
-          Antarik Bakery is a home-based bakery in Falakata, Alipurduar,
-          West Bengal. We make customised birthday cakes, anniversary
-          cakes and cakes for other celebrations, starting from ₹150.
-          Share your preferred flavour, size, theme and message with us.
-          Contact us to confirm the final price, availability and
-          collection or delivery arrangements.
-        </p>
-      </section>
-    </section>
+  <!-- Existing English summary preserved -->
+  <section class="english-summary" lang="en"
+    aria-labelledby="english-heading">
+    <h2 id="english-heading">
+      Antarik Bakery — Homemade Cakes in Falakata, Alipurduar
+    </h2>
+    <p>
+      Antarik Bakery is a home-based bakery in Falakata, Alipurduar,
+      West Bengal. We make customised birthday cakes, anniversary
+      cakes and cakes for other celebrations, starting from ₹150.
+      Share your preferred flavour, size, theme and message with us.
+      Contact us to confirm the final price, availability and
+      collection or delivery arrangements.
+    </p>
+  </section>
+</section>
   </main>
 
   <footer>
@@ -1133,26 +1253,7 @@ summary:focus-visible {
        আপনার ফোন নম্বর ও কেকের তালিকা এখানে পরিবর্তন করুন
        ========================================================== */
 
-    // Country code সহ ফোন নম্বর লিখুন: "+91XXXXXXXXXX"
-    // আপাতত খালি রাখলে কোনো ভুল বা অকার্যকর call link দেখাবে না।
-    const bakeryPhone = "";
-
-    /*
-      নতুন কেক যোগ করার নিয়ম:
-
-      ১. নিচের একটি { ... } অংশ copy করে তালিকায় যোগ করুন।
-      ২. দুটি cake object-এর মাঝে comma দিন।
-      ৩. nameBn-এ বাংলা নাম এবং nameEn-এ ইংরেজি নাম লিখুন।
-      ৪. category-তে একই নাম দিলে একই filter-এ থাকবে।
-         নতুন category দিলে নতুন filter নিজে থেকেই তৈরি হবে।
-      ৫. image-এ ছবির filename দিন, যেমন "chocolate-cake.jpg"।
-         ছবিটি index.html-এর পাশে রাখুন।
-         image খালি থাকলে আঁকা ছবি দেখাবে।
-      ৬. price-এ আসল দাম দিন, যেমন "₹৩৫০ থেকে"।
-         খালি রাখলে "দাম জানতে যোগাযোগ করুন" দেখাবে।
-
-      যত কেক যোগ করবেন, layout নিজে থেকেই মানিয়ে নেবে।
-    */
+    const bakeryPhone = "+919883771994";
 
     const cakes = [
       {
