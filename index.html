@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#782e49">
+  <meta name="theme-color" content="#923c2e">
 
   <title>Antarik Bakery | Birthday &amp; Anniversary Cakes in Falakata</title>
 
@@ -13,7 +13,6 @@
   <meta name="google-site-verification"
     content="lT_XmDY5r5zbgTeif09I2KlPZn_6FjSQUlpMbL6Bn5A">
 
-  <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,7 +21,6 @@
 
   <link rel="canonical" href="https://antarik-bakery.github.io/">
 
-  <!-- Social sharing -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_IN">
   <meta property="og:site_name" content="Antarik Bakery | আন্তরিক বেকারি">
@@ -42,7 +40,6 @@
   <meta name="twitter:image"
     content="https://antarik-bakery.github.io/logo.png">
 
-  <!-- Bakery structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -90,16 +87,18 @@
 
   <style>
     :root {
-      --cream: #fffaf5;
-      --pink: #f9e5eb;
-      --berry: #782e49;
-      --rose: #b94f73;
-      --ink: #422833;
-      --muted: #806770;
-      --border: #ead8dd;
+      --cream: #fff8e9;
+      --pink: #f5e4cf;
+      --berry: #923c2e;
+      --rose: #a94b33;
+      --ink: #432e25;
+      --muted: #786052;
+      --border: #e5ceb3;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html {
       scroll-behavior: smooth;
@@ -114,15 +113,36 @@
       line-height: 1.85;
     }
 
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
-    img { max-width: 100%; }
-    h1, h2, h3, p { margin-top: 0; }
-    [hidden] { display: none !important; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    ::selection {
+      background: #ead2ae;
+      color: #432e25;
+    }
 
     a:focus-visible,
     button:focus-visible,
-    summary:focus-visible {
+    summary:focus-visible,
+    .gallery-row:focus-visible {
       outline: 3px solid var(--rose);
       outline-offset: 5px;
     }
@@ -134,8 +154,8 @@
 
     .announcement {
       padding: 9px 15px;
-      background: var(--berry);
-      color: white;
+      background: #365640;
+      color: #fff8e9;
       text-align: center;
       font-size: 13px;
     }
@@ -188,10 +208,13 @@
       display: flex;
       align-items: center;
       gap: 25px;
+      background: var(--cream);
       font-size: 14px;
     }
 
-    .nav-links a:hover { color: var(--rose); }
+    .nav-links a:hover {
+      color: var(--rose);
+    }
 
     .menu-toggle {
       display: none;
@@ -212,20 +235,24 @@
       border: 1px solid var(--berry);
       border-radius: 5px;
       background: var(--berry);
-      color: white;
+      color: #fffaf0;
       font-size: 14px;
       transition: background .2s, transform .2s;
     }
 
     .button:hover {
-      background: #582137;
-      color: white;
+      background: #702b22;
+      color: #fffaf0;
       transform: translateY(-2px);
     }
 
     .button.outline {
       background: transparent;
       color: var(--berry);
+    }
+
+    .button.outline:hover {
+      background: #f4e3cf;
     }
 
     .eyebrow {
@@ -255,7 +282,8 @@
       line-height: 1.45;
     }
 
-    h1 em, h2 em {
+    h1 em,
+    h2 em {
       color: var(--rose);
       font-style: normal;
     }
@@ -295,10 +323,10 @@
       place-items: center;
       aspect-ratio: 1 / 1.08;
       overflow: hidden;
-      background: #f8edf0;
-      border: 1px solid #ead4dd;
+      background: #fffaf2;
+      border: 1px solid #dec29b;
       border-radius: 48% 48% 12px 12px;
-      box-shadow: 14px 15px 0 #f0dce1;
+      box-shadow: 14px 15px 0 #ead2ae;
     }
 
     .logo-frame img {
@@ -314,17 +342,22 @@
       place-content: center;
       width: 112px;
       height: 112px;
-      border: 6px double #e4b4c3;
+      border: 6px double #d8bd82;
       border-radius: 50%;
-      background: var(--berry);
-      color: white;
+      background: #365640;
+      color: #fff8e9;
       text-align: center;
       transform: rotate(8deg);
       line-height: 1.5;
     }
 
-    .stamp small { font-size: 12px; }
-    .stamp strong { font-size: 30px; }
+    .stamp small {
+      font-size: 12px;
+    }
+
+    .stamp strong {
+      font-size: 30px;
+    }
 
     .ribbon {
       display: flex;
@@ -333,15 +366,19 @@
       gap: 32px;
       padding: 18px;
       border-block: 1px solid var(--border);
-      background: #faeee8;
-      color: var(--berry);
+      background: #f3e2c5;
+      color: #713b2a;
       text-align: center;
       font-size: 17px;
     }
 
-    .ribbon span:nth-child(even) { color: var(--rose); }
+    .ribbon span:nth-child(even) {
+      color: #8b6230;
+    }
 
-    .section { padding-block: 70px; }
+    .section {
+      padding-block: 70px;
+    }
 
     h2 {
       margin-bottom: 18px;
@@ -393,9 +430,9 @@
     }
 
     .filter[aria-pressed="true"] {
-      background: var(--berry);
-      border-color: var(--berry);
-      color: white;
+      background: #365640;
+      border-color: #365640;
+      color: #fff8e9;
     }
 
     .cards {
@@ -413,7 +450,7 @@
       overflow: hidden;
       border: 1px solid var(--border);
       border-radius: 10px;
-      background: #fffdf9;
+      background: #fffdf6;
     }
 
     .cake-art {
@@ -422,11 +459,16 @@
       place-items: center;
       aspect-ratio: 1.25;
       overflow: hidden;
-      background: #f1ddd3;
+      background: #efd8c1;
     }
 
-    .card:nth-child(3n+2) .cake-art { background: #eee4d6; }
-    .card:nth-child(3n+3) .cake-art { background: #f4dfe8; }
+    .card:nth-child(3n+2) .cake-art {
+      background: #e3e8d5;
+    }
+
+    .card:nth-child(3n+3) .cake-art {
+      background: #f3e3bb;
+    }
 
     .cake-art > img {
       width: 100%;
@@ -452,8 +494,8 @@
       right: 10px;
       padding: 3px 9px;
       border-radius: 20px;
-      background: rgba(255, 250, 245, .95);
-      color: var(--muted);
+      background: rgba(255, 250, 238, .96);
+      color: #705746;
       font-size: 11px;
     }
 
@@ -506,6 +548,123 @@
       font-size: 12px;
     }
 
+    /* Two-row continuous sliding gallery */
+    .gallery-section {
+      overflow: hidden;
+    }
+
+    .gallery-window {
+      padding-block: 12px;
+    }
+
+    .gallery-row {
+      overflow-x: auto;
+      padding-block: 12px;
+    }
+
+    .gallery-window.is-animated .gallery-row {
+      overflow-x: hidden;
+    }
+
+    .gallery-track {
+      display: flex;
+      width: max-content;
+    }
+
+    .gallery-window.is-animated .gallery-track {
+      animation: gallery-slide var(--gallery-duration, 45s) linear infinite;
+    }
+
+    .gallery-window.is-animated .gallery-track-reverse {
+      animation-direction: reverse;
+    }
+
+    .gallery-group {
+      display: flex;
+      flex-shrink: 0;
+      gap: 24px;
+      padding-right: 24px;
+    }
+
+    .gallery-item {
+      position: relative;
+      flex: 0 0 auto;
+      width: clamp(240px, 28vw, 340px);
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fffdf6;
+    }
+
+    .gallery-photo {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: var(--pink);
+    }
+
+    .gallery-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-item figcaption {
+      padding: 15px 18px;
+      color: var(--berry);
+      font-size: 14px;
+    }
+
+    .gallery-window:hover .gallery-track,
+    .gallery-window:focus-within .gallery-track,
+    .gallery-window.is-paused .gallery-track {
+      animation-play-state: paused;
+    }
+
+    .gallery-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .gallery-toggle {
+      cursor: pointer;
+    }
+
+    .gallery-help {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .gallery-fallback {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      padding: 25px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @keyframes gallery-slide {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
     .about {
       background: var(--pink);
       border-block: 1px solid var(--border);
@@ -534,29 +693,79 @@
       letter-spacing: 2px;
     }
 
-    .about p { color: var(--muted); }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 35px;
-      border-block: 1px solid var(--border);
+    .about p {
+      color: var(--muted);
     }
 
-    .step {
-      padding: 28px;
-      border-right: 1px solid var(--border);
+    /* Customer reviews */
+    .review-card .card-body {
+      gap: 12px;
     }
 
-    .step:first-child { padding-left: 0; }
-    .step:last-child { border-right: 0; }
-    .step small { color: var(--rose); font-size: 12px; }
-    .step h3 { margin: 10px 0; font-size: 25px; }
-    .step p { margin: 0; color: var(--muted); font-size: 14px; }
+    .review-stars {
+      color: var(--rose);
+      font-size: 20px;
+      letter-spacing: 3px;
+      line-height: 1.4;
+    }
 
-    .faq { max-width: 800px; }
+    .review-quote {
+      margin: 0;
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.85;
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
 
-    details { border-bottom: 1px solid var(--border); }
+    .review-author {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .review-author strong {
+      display: block;
+      color: var(--berry);
+      font-size: 14px;
+    }
+
+    .review-author small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .review-source {
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    .reviews-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .reviews-empty {
+      margin: 0;
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fffdf6;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .faq {
+      max-width: 800px;
+    }
+
+    details {
+      border-bottom: 1px solid var(--border);
+    }
 
     summary {
       padding: 21px 5px;
@@ -580,226 +789,13 @@
       gap: 40px;
       padding: 45px;
       border-radius: 10px;
-      background: var(--berry);
-      color: white;
-    }
-
-    .contact .eyebrow { color: #f1c5d2; }
-    .contact p { color: #f0d7df; }
-    .contact address { font-style: normal; color: #f0d7df; }
-    .contact .english-subtitle { color: #efd2dc; }
-
-    .contact-box {
-      padding: 25px;
-      border: 1px solid #a6657c;
-      border-radius: 8px;
-    }
-
-    .contact-box small {
-      display: block;
-      color: #efd2dc;
-      font-size: 13px;
-    }
-
-    .phone-display {
-      display: block;
-      margin: 9px 0 18px;
-      font-size: 22px;
-      overflow-wrap: anywhere;
-    }
-
-    .contact .button {
-      background: var(--cream);
-      color: var(--berry);
-    }
-
-    .map-link {
-      display: inline-block;
-      margin-top: 18px;
-      font-size: 14px;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    .english-summary {
-      margin-top: 35px;
-      padding-top: 25px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font: 13px/1.8 Arial, sans-serif;
-    }
-
-    .english-summary h2 {
-      font: 20px/1.5 Georgia, serif;
-      color: var(--berry);
-      margin-bottom: 10px;
-    }
-
-    footer {
-      margin-top: 55px;
-      padding-block: 30px;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    footer strong { font-size: 23px; }
-    footer p { margin: 5px 0 0; color: var(--muted); font-size: 12px; }
-    footer a { font-size: 13px; }
-
-    @media (max-width: 850px) {
-      .menu-toggle { display: block; }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 92px;
-        left: -5.6%;
-        right: -5.6%;
-        padding: 25px;
-        background: var(--cream);
-        border-bottom: 1px solid var(--border);
-      }
-
-      .nav-links.open { display: flex; flex-wrap: wrap; }
-      .hero { gap: 25px; }
-      .about-grid { gap: 35px; }
-      .handwritten { font-size: 42px; }
-      .section-heading { align-items: start; flex-direction: column; gap: 0; }
-      .contact { padding: 30px; gap: 25px; }
-    }
-
-    @media (max-width: 600px) {
-      .announcement { font-size: 11px; }
-      .brand strong { font-size: 21px; }
-      .brand img { width: 50px; height: 50px; }
-      .brand small { font-size: 9px; letter-spacing: 0; }
-      .hero { grid-template-columns: 1fr; padding-block: 40px; }
-      h1 { font-size: 43px; }
-      .hero-art { width: min(350px, 100%); margin: 15px auto; }
-      .ribbon { gap: 10px; font-size: 12px; }
-      .section { padding-block: 50px; }
-      .about-grid { grid-template-columns: 1fr; gap: 45px; }
-      .handwritten { padding-block: 15px; font-size: 44px; }
-      .steps { grid-template-columns: 1fr; }
-
-      .step, .step:first-child {
-        padding: 25px 0;
-        border-right: 0;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .step:last-child { border-bottom: 0; }
-      .contact { grid-template-columns: 1fr; padding: 25px; }
-      .contact-box { padding: 20px; }
-      .footer-content { flex-direction: column; align-items: start; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      * { transition: none !important; }
-    }
-
-    /* Original warm Bengali bakery colour theme */
-    :root {
-      --cream: #fff8e9;
-      --pink: #f5e4cf;
-      --berry: #923c2e;
-      --rose: #a94b33;
-      --ink: #432e25;
-      --muted: #786052;
-      --border: #e5ceb3;
-    }
-
-    body,
-    header,
-    .nav-links {
-      background: var(--cream);
-    }
-
-    .announcement {
-      background: #365640;
-      color: #fff8e9;
-    }
-
-    .brand strong { color: var(--berry); }
-
-    .button {
-      background: var(--berry);
-      border-color: var(--berry);
-      color: #fffaf0;
-    }
-
-    .button:hover {
-      background: #702b22;
-      color: #fffaf0;
-    }
-
-    .button.outline {
-      background: transparent;
-      color: var(--berry);
-    }
-
-    .button.outline:hover { background: #f4e3cf; }
-
-    .logo-frame {
-      background: #fffaf2;
-      border-color: #dec29b;
-      box-shadow: 14px 15px 0 #ead2ae;
-    }
-
-    .stamp {
-      background: #365640;
-      border-color: #d8bd82;
-      color: #fff8e9;
-    }
-
-    .ribbon {
-      background: #f3e2c5;
-      border-color: var(--border);
-      color: #713b2a;
-    }
-
-    .ribbon span:nth-child(even) { color: #8b6230; }
-
-    .card {
-      background: #fffdf6;
-      border-color: var(--border);
-    }
-
-    .cake-art { background: #efd8c1; }
-    .card:nth-child(3n+2) .cake-art { background: #e3e8d5; }
-    .card:nth-child(3n+3) .cake-art { background: #f3e3bb; }
-
-    .art-label {
-      background: rgba(255, 250, 238, .96);
-      color: #705746;
-    }
-
-    .filter[aria-pressed="true"] {
-      background: #365640;
-      border-color: #365640;
-      color: #fff8e9;
-    }
-
-    .about {
-      background: #f5e4cf;
-      border-color: var(--border);
-    }
-
-    .handwritten { color: #923c2e; }
-
-    .contact {
       background: #304d3b;
       color: #fff8e9;
     }
 
-    .contact .eyebrow { color: #ecd5a4; }
+    .contact .eyebrow {
+      color: #ecd5a4;
+    }
 
     .contact p,
     .contact address,
@@ -808,9 +804,27 @@
       color: #eee4cf;
     }
 
+    .contact address {
+      font-style: normal;
+    }
+
     .contact-box {
+      padding: 25px;
+      border: 1px solid #829071;
+      border-radius: 8px;
       background: #3b5945;
-      border-color: #829071;
+    }
+
+    .contact-box small {
+      display: block;
+      font-size: 13px;
+    }
+
+    .phone-display {
+      display: block;
+      margin: 9px 0 18px;
+      font-size: 22px;
+      overflow-wrap: anywhere;
     }
 
     .contact .button {
@@ -824,20 +838,18 @@
       color: #263d2f;
     }
 
-    .map-link { color: #fff0ca; }
-
-    ::selection {
-      background: #ead2ae;
-      color: #432e25;
+    .contact a:focus-visible {
+      outline-color: #f0d49c;
     }
 
-    a:focus-visible,
-    button:focus-visible,
-    summary:focus-visible {
-      outline-color: #a94b33;
+    .map-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: #fff0ca;
+      font-size: 14px;
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
-
-    .contact a:focus-visible { outline-color: #f0d49c; }
 
     .contact-buttons {
       display: flex;
@@ -863,7 +875,9 @@
       color: #ffffff;
     }
 
-    .contact-help { margin-top: 15px; }
+    .contact-help {
+      margin-top: 15px;
+    }
 
     .social-section {
       margin-top: 25px;
@@ -896,6 +910,187 @@
     .social-link:hover {
       background: rgba(255, 255, 255, .12);
     }
+
+    .english-summary {
+      margin-top: 35px;
+      padding-top: 25px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font: 13px/1.8 Arial, sans-serif;
+    }
+
+    .english-summary h2 {
+      font: 20px/1.5 Georgia, serif;
+      color: var(--berry);
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 55px;
+      padding-block: 30px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    footer strong {
+      font-size: 23px;
+    }
+
+    footer p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer a {
+      font-size: 13px;
+    }
+
+    @media (max-width: 850px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 92px;
+        left: -5.6%;
+        right: -5.6%;
+        padding: 25px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        gap: 25px;
+      }
+
+      .about-grid {
+        gap: 35px;
+      }
+
+      .handwritten {
+        font-size: 42px;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .contact {
+        padding: 30px;
+        gap: 25px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .announcement {
+        font-size: 11px;
+      }
+
+      .brand strong {
+        font-size: 21px;
+      }
+
+      .brand img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .brand small {
+        font-size: 9px;
+        letter-spacing: 0;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-block: 40px;
+      }
+
+      h1 {
+        font-size: 43px;
+      }
+
+      .hero-art {
+        width: min(350px, 100%);
+        margin: 15px auto;
+      }
+
+      .ribbon {
+        gap: 10px;
+        font-size: 12px;
+      }
+
+      .section {
+        padding-block: 50px;
+      }
+
+      .gallery-group {
+        gap: 16px;
+        padding-right: 16px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .handwritten {
+        padding-block: 15px;
+        font-size: 44px;
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
+        padding: 25px;
+      }
+
+      .contact-box {
+        padding: 20px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+
+      .gallery-window.is-animated .gallery-row {
+        overflow-x: auto;
+      }
+
+      .gallery-window.is-animated .gallery-track {
+        animation: none;
+        transform: none;
+      }
+
+      .gallery-group[aria-hidden="true"],
+      .gallery-item[data-gallery-filler] {
+        display: none;
+      }
+    }
   </style>
 </head>
 
@@ -907,9 +1102,11 @@
   <header>
     <nav class="container" aria-label="Main navigation">
       <a class="brand" href="#top">
-        <img src="logo.png"
+        <img
+          src="logo.png"
           alt="Antarik Bakery — আন্তরিক বেকারি"
-          width="62" height="62">
+          width="62"
+          height="62">
 
         <span>
           <strong lang="bn-IN">আন্তরিক বেকারি</strong>
@@ -917,7 +1114,8 @@
         </span>
       </a>
 
-      <button class="menu-toggle"
+      <button
+        class="menu-toggle"
         type="button"
         aria-expanded="false"
         aria-controls="navigation">
@@ -926,7 +1124,9 @@
 
       <div class="nav-links" id="navigation">
         <a href="#cakes">Our Cakes</a>
+        <a href="#gallery">Our Work</a>
         <a href="#about">About Us</a>
+        <a href="#reviews">Reviews</a>
         <a class="button outline" href="#contact">Contact</a>
       </div>
     </nav>
@@ -966,7 +1166,8 @@
 
       <div class="hero-art">
         <div class="logo-frame">
-          <img src="hero.png"
+          <img
+            src="hero.png"
             alt="Antarik Bakery — homemade cakes in Falakata">
         </div>
 
@@ -979,7 +1180,7 @@
     </section>
 
     <div class="ribbon" aria-hidden="true">
-      <span>Homemade </span>
+      <span>Homemade</span>
       <span>✧</span>
       <span>Your choice of design</span>
       <span>✧</span>
@@ -1008,8 +1209,11 @@
         </p>
       </div>
 
-      <div class="filters" id="cake-filters"
-        aria-label="Choose a cake category"></div>
+      <div
+        class="filters"
+        id="cake-filters"
+        aria-label="Choose a cake category">
+      </div>
 
       <div class="cards" id="cake-list"></div>
 
@@ -1027,6 +1231,104 @@
         Contact us to discuss your preferred design, confirm
         the price and check availability for your date.
       </p>
+    </section>
+
+    <!-- Two gallery rows moving in opposite directions -->
+    <section
+      class="section gallery-section"
+      id="gallery"
+      aria-labelledby="gallery-heading">
+
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">
+              Made with care, made for your moments
+            </span>
+
+            <h2 id="gallery-heading">
+              A little look at<br>
+              <em>our cake creations.</em>
+            </h2>
+
+            <span class="english-subtitle" lang="bn-IN">
+              আমাদের তৈরি কেকের কিছু মিষ্টি ঝলক।
+            </span>
+          </div>
+
+          <p>
+            Explore cakes we've created for birthdays, anniversaries
+            and special celebrations. Found a design you love?
+            Let's make something special for you.
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-window" id="gallery-window">
+        <div
+          class="gallery-row"
+          tabindex="0"
+          role="region"
+          aria-label="Cake gallery, first row"
+          aria-describedby="gallery-help">
+
+          <div class="gallery-track" id="gallery-track">
+            <div class="gallery-group" id="gallery-original"></div>
+          </div>
+        </div>
+
+        <div
+          class="gallery-row"
+          tabindex="0"
+          role="region"
+          aria-label="Cake gallery, second row"
+          aria-describedby="gallery-help">
+
+          <div
+            class="gallery-track gallery-track-reverse"
+            id="gallery-track-second">
+            <div
+              class="gallery-group"
+              id="gallery-original-second">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container gallery-controls">
+        <button
+          class="button outline gallery-toggle"
+          id="gallery-toggle"
+          type="button"
+          aria-controls="gallery-track gallery-track-second"
+          aria-pressed="false"
+          hidden>
+          Pause slideshow
+        </button>
+
+        <a class="text-link" href="#contact">
+          Discuss your cake design ↗
+        </a>
+
+        <p class="gallery-help" id="gallery-help">
+          Hover over the gallery or use the pause button to take a closer look.
+        </p>
+      </div>
+
+      <noscript>
+        <div class="container">
+          <p>
+            View more of our cake creations on
+            <a
+              class="text-link"
+              href="https://www.instagram.com/antarikbakery"
+              target="_blank"
+              rel="noopener noreferrer">
+              Instagram ↗
+            </a>
+          </p>
+        </div>
+      </noscript>
     </section>
 
     <section class="about" id="about">
@@ -1069,6 +1371,57 @@
             Let's talk about your cake ↗
           </a>
         </div>
+      </div>
+    </section>
+
+    <section
+      class="container section"
+      id="reviews"
+      aria-labelledby="reviews-heading">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Sweet words from our customers</span>
+
+          <h2 id="reviews-heading">
+            Your celebrations,<br>
+            <em>your stories.</em>
+          </h2>
+
+          <span class="english-subtitle" lang="bn-IN">
+            আপনাদের ভালোবাসাই আমাদের প্রেরণা।
+          </span>
+        </div>
+
+        <p>
+          Have you celebrated with an Antarik Bakery cake?
+          We'd love to hear about your experience.
+        </p>
+      </div>
+
+      <div class="cards" id="review-list"></div>
+
+      <p class="reviews-empty" id="reviews-empty">
+        Discover customer experiences on our Google profile.
+        Tried one of our cakes? We'd love to hear your feedback too.
+      </p>
+
+      <div class="reviews-actions">
+        <a
+          class="button outline"
+          href="https://share.google/9ve2sKIftpXUFSTDf"
+          target="_blank"
+          rel="noopener noreferrer">
+          Read our Google reviews ↗
+        </a>
+
+        <a
+          class="text-link"
+          href="https://wa.me/919883771994?text=Hello%20Antarik%20Bakery!%20I%20would%20like%20to%20share%20feedback%20about%20my%20cake."
+          target="_blank"
+          rel="noopener noreferrer">
+          Share your feedback ↗
+        </a>
       </div>
     </section>
 
@@ -1167,16 +1520,17 @@
             </span>
           </address>
 
-          <a class="map-link"
-            href="https://share.google/coWrwUVeXYoAxEWWk"
+          <a
+            class="map-link"
+            href="https://share.google/9ve2sKIftpXUFSTDf"
             target="_blank"
             rel="noopener noreferrer">
-            View on Google Maps ↗
+            View our Google profile ↗
           </a>
 
           <p style="font-size:12px">
-            The map shows our local area.
-            Please contact us for our exact address.
+            Please contact us to confirm our exact address
+            and arrange cake collection.
           </p>
         </div>
 
@@ -1188,18 +1542,21 @@
           </strong>
 
           <div class="contact-buttons">
-            <a class="button"
+            <a
+              class="button"
               id="call-button"
               href="tel:+919883771994">
               Call Now ↗
             </a>
 
-            <a class="button whatsapp-button"
+            <a
+              class="button whatsapp-button"
               href="https://wa.me/919883771994?text=Hello%20Antarik%20Bakery!%20I%20would%20like%20to%20enquire%20about%20a%20cake."
               target="_blank"
               rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor"
+                <path
+                  fill="currentColor"
                   d="M20.52 3.48A11.89 11.89 0 0 0 12.05 0C5.47 0 .11 5.35.1 11.93c0 2.1.55 4.15 1.6 5.96L0 24l6.26-1.64a11.95 11.95 0 0 0 5.78 1.47h.01C18.63 23.83 24 18.48 24 11.9a11.85 11.85 0 0 0-3.48-8.42ZM12.05 21.8a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.97.99-3.63-.24-.37a9.87 9.87 0 0 1-1.51-5.25c0-5.47 4.46-9.92 9.93-9.92a9.85 9.85 0 0 1 7.02 2.91 9.85 9.85 0 0 1 2.9 7.02c0 5.47-4.46 9.92-9.97 9.86Zm5.45-7.43c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.8-1.49-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.3 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/>
               </svg>
               Chat on WhatsApp
@@ -1215,32 +1572,40 @@
             <small>Stay connected</small>
 
             <div class="social-links">
-              <a class="social-link"
+              <a
+                class="social-link"
                 href="https://www.facebook.com/p/Antarik-Bakery-61572442528197/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Antarik Bakery on Facebook">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path fill="currentColor"
+                  <path
+                    fill="currentColor"
                     d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.095 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.026 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.49 0-1.956.93-1.956 1.885v2.266h3.328l-.532 3.49h-2.796V24C19.612 23.095 24 18.1 24 12.073Z"/>
                 </svg>
                 <span>Facebook</span>
               </a>
 
-              <a class="social-link"
+              <a
+                class="social-link"
                 href="https://www.instagram.com/antarikbakery"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Antarik Bakery on Instagram">
-                <svg viewBox="0 0 24 24"
+                <svg
+                  viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.8"
                   aria-hidden="true">
                   <rect x="3" y="3" width="18" height="18" rx="5"/>
                   <circle cx="12" cy="12" r="4"/>
-                  <circle cx="17.5" cy="6.5" r="1"
-                    fill="currentColor" stroke="none"/>
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"/>
                 </svg>
                 <span>Instagram</span>
               </a>
@@ -1249,7 +1614,8 @@
         </div>
       </div>
 
-      <section class="english-summary"
+      <section
+        class="english-summary"
         aria-labelledby="english-heading">
         <h2 id="english-heading">
           Antarik Bakery — Homemade Cakes in Falakata, Alipurduar
@@ -1283,9 +1649,9 @@
     </div>
   </footer>
 
-  <!-- Fallback illustration when a cake image is unavailable -->
   <template id="cake-illustration">
-    <svg viewBox="0 0 320 230"
+    <svg
+      viewBox="0 0 320 230"
       role="img"
       aria-label="Sample cake illustration">
       <ellipse cx="160" cy="202" rx="112" ry="12" fill="#d7b7bf"/>
@@ -1312,7 +1678,10 @@
   </template>
 
   <script>
-    /* Update your phone number and cake list here. */
+    /* ==========================================================
+       BAKERY SETTINGS
+       ========================================================== */
+
     const bakeryPhone = "+919883771994";
 
     const cakes = [
@@ -1345,6 +1714,126 @@
       }
     ];
 
+    /* ==========================================================
+       GALLERY PHOTOS
+       Add more photos to this array whenever needed.
+       ========================================================== */
+
+    const galleryPhotos = [
+      {
+        image: "/work/cake1.png",
+        title: "Twins Birthday Cake",
+        alt: "Bulduzar and racing car themed birthday cake created by Antarik Bakery in Falakata"
+      },
+      {
+        image: "/work/cake2.png",
+        title: "Gym Theme Cake",
+        alt: "Gym themed cake created by Antarik Bakery"
+      },
+      {
+        image: "/work/cake3.jpg",
+        title: "Spider-Man themed Cake",
+        alt: "Spider-Man themed birthday cake created by Antarik Bakery in Falakata"
+      },
+      {
+        image: "/work/cake4.jpg",
+        title: "Marriage Celebration Cake",
+        alt: "Marriage celebration cake created by Antarik Bakery in Falakata"
+      },
+      {
+        image: "/work/cake5.png",
+        title: "Celebration cake creation",
+        alt: "Celebration cake created by Antarik Bakery"
+      },
+      {
+        image: "/work/cake6.png",
+        title: "Biriyani Cake",
+        alt: "Biriyani themed cake created by Antarik Bakery"
+      },
+      {
+        image: "/work/cake7.png",
+        title: "Chocolate Birthday Cake",
+        alt: "Chocolate birthday cake created by Antarik Bakery in Falakata"
+      },
+      {
+        image: "/work/cake8.png",
+        title: "Birthday cake ",
+        alt: "Celebration cake created by Antarik Bakery"
+      },
+      {
+        image: "birthday.png",
+        title: "Birthday cake creation",
+        alt: "Birthday cake created by Antarik Bakery in Falakata"
+      },
+      {
+        image: "hero.png",
+        title: "Celebration cake creation",
+        alt: "Celebration cake created by Antarik Bakery"
+      },
+      {
+        image: "other.png",
+        title: "A cake for a special moment",
+        alt: "Custom cake design created by Antarik Bakery"
+      }
+    ];
+
+    /* ==========================================================
+       MANUAL CUSTOMER REVIEWS
+       These do not automatically update from Google.
+       ========================================================== */
+
+    const customerReviews = [
+      {
+        name: "Snehasish Dhar",
+        text: "Best customised home made cake shop of Falakata...... my friends ordered my birthday cake from Antarik Bakery",
+        rating: 5,
+        date: "",
+        source: "Google Review",
+        url: "",
+        lang: "en"
+      },
+      {
+        name: "Ayashi Sutradhar",
+        text: "I've been buying cakes from this home bakery over a year now,and they never disappoint!each cake is beautifully crafted,super fresh,and tastes absolutely delicious 😋. whether it's for birthdays, celebration,or just a sweet craving -they always get it right. Highly recommend ❣️❣️",
+        rating: 5,
+        date: "",
+        source: "Google Review",
+        url: "",
+        lang: "en"
+      },
+      {
+        name: "Anonymous",
+        text: "I was the one who ordered the Red & White cake(Made for each other) from you. You made it absolutely beautiful! The design and finishing were just perfect. Really loved your work. Thank you so much! ",
+        rating: 5,
+        date: "",
+        source: "Facebook feedback",
+        url: "",
+        lang: "en"
+      },
+      {
+        name: "Aritree Datta",
+        text: "I recently bought a cake from here and it was absolutely the best!Super fresh, delicious,and beautifully decorated.Everyone loved it.No doubt best home made cake available in Falakata.Highly recommended if you're looking for quality and great taste.❤️❤️",
+        rating: 5,
+        date: "",
+        source: "Google Review",
+        url: "",
+        lang: "en"
+      },
+      {
+        name: "Bipul Barman",
+        text: "Yummiest cake ever!soft,fresh and perfect in every bite.will order again for sure!best home bakery in falakata.",
+        rating: 5,
+        date: "",
+        source: "Google Review",
+        url: "",
+        lang: "en"
+      }
+    ];
+
+    /* ==========================================================
+       MOBILE MENU
+       ========================================================== */
+
     const menuButton = document.querySelector(".menu-toggle");
     const navigation = document.querySelector(".nav-links");
 
@@ -1375,6 +1864,10 @@
       }
     });
 
+    /* ==========================================================
+       PHONE NUMBER
+       ========================================================== */
+
     const phone = bakeryPhone.trim();
     const dialNumber = phone.replace(/[^\d+]/g, "");
 
@@ -1387,9 +1880,6 @@
       callButton.href = "tel:" + dialNumber;
       callButton.hidden = false;
 
-      document.getElementById("phone-note").textContent =
-        "Contact us to confirm the final price, availability and collection or delivery arrangements.";
-
       const schemaElement =
         document.querySelector('script[type="application/ld+json"]');
 
@@ -1397,6 +1887,10 @@
       schema.telephone = dialNumber;
       schemaElement.textContent = JSON.stringify(schema);
     }
+
+    /* ==========================================================
+       CAKE CARDS
+       ========================================================== */
 
     const cakeList = document.getElementById("cake-list");
     const filterList = document.getElementById("cake-filters");
@@ -1423,7 +1917,6 @@
 
       if (cake.image && cake.image.trim()) {
         const photo = document.createElement("img");
-        photo.src = cake.image;
         photo.alt = cake.nameEn + " — Antarik Bakery";
         photo.loading = "lazy";
         photo.decoding = "async";
@@ -1433,6 +1926,7 @@
         }, { once: true });
 
         art.appendChild(photo);
+        photo.src = cake.image;
       } else {
         addIllustration(art);
       }
@@ -1441,7 +1935,7 @@
       body.className = "card-body";
 
       const title = document.createElement("h3");
-      title.appendChild(document.createTextNode(cake.nameEn));
+      title.textContent = cake.nameEn;
 
       const description = document.createElement("p");
       description.textContent = cake.description;
@@ -1470,6 +1964,10 @@
       card.append(art, body);
       cakeList.appendChild(card);
     });
+
+    /* ==========================================================
+       CAKE FILTERS
+       ========================================================== */
 
     const categories = [
       ...new Set(cakes.map(cake => cake.category))
@@ -1507,6 +2005,399 @@
 
       filterList.appendChild(button);
     });
+
+    /* ==========================================================
+       TWO-ROW CONTINUOUS SLIDING GALLERY
+       Top row moves left. Bottom row moves right.
+       ========================================================== */
+
+    const galleryWindow = document.getElementById("gallery-window");
+    const galleryToggle = document.getElementById("gallery-toggle");
+    const galleryHelp = document.getElementById("gallery-help");
+
+    const galleryRows = [
+      {
+        track: document.getElementById("gallery-track"),
+        group: document.getElementById("gallery-original")
+      },
+      {
+        track: document.getElementById("gallery-track-second"),
+        group: document.getElementById("gallery-original-second")
+      }
+    ];
+
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
+
+    let galleryPaused = false;
+    let galleryResizeFrame;
+
+    function showGalleryImageFallback(image) {
+      const frame = image.parentElement;
+
+      if (!frame || !frame.classList.contains("gallery-photo")) {
+        return;
+      }
+
+      const fallback = document.createElement("div");
+      fallback.className = "gallery-fallback";
+      fallback.textContent = "Photo unavailable";
+
+      frame.replaceChildren(fallback);
+    }
+
+    function handleGalleryImage(image) {
+      image.addEventListener("error", () => {
+        showGalleryImageFallback(image);
+      }, { once: true });
+
+      if (image.complete && image.naturalWidth === 0) {
+        showGalleryImageFallback(image);
+      }
+    }
+
+    function createGalleryItem(photo) {
+      const figure = document.createElement("figure");
+      figure.className = "gallery-item";
+
+      const photoFrame = document.createElement("div");
+      photoFrame.className = "gallery-photo";
+
+      const image = document.createElement("img");
+      image.alt = photo.alt;
+      image.width = 680;
+      image.height = 680;
+      image.decoding = "async";
+
+      const caption = document.createElement("figcaption");
+      caption.textContent = photo.title;
+
+      photoFrame.appendChild(image);
+      figure.append(photoFrame, caption);
+
+      image.addEventListener("error", () => {
+        showGalleryImageFallback(image);
+      }, { once: true });
+
+      image.src = photo.image;
+
+      return figure;
+    }
+
+    /*
+      Split photos between rows.
+      For fewer than four photos, repeat the collection in
+      a different order so both rows contain photographs.
+    */
+    let rowPhotos;
+
+    if (galleryPhotos.length >= 4) {
+      rowPhotos = [
+        galleryPhotos.filter((photo, index) => index % 2 === 0),
+        galleryPhotos.filter((photo, index) => index % 2 !== 0)
+      ];
+    } else {
+      const offset = Math.ceil(galleryPhotos.length / 2);
+
+      rowPhotos = [
+        galleryPhotos,
+        [
+          ...galleryPhotos.slice(offset),
+          ...galleryPhotos.slice(0, offset)
+        ]
+      ];
+    }
+
+    galleryRows.forEach((row, rowIndex) => {
+      rowPhotos[rowIndex].forEach(photo => {
+        row.group.appendChild(createGalleryItem(photo));
+      });
+
+      row.group.querySelectorAll("img").forEach(image => {
+        if (image.complete && image.naturalWidth === 0) {
+          showGalleryImageFallback(image);
+        }
+      });
+    });
+
+    function createGalleryClone(element) {
+      const clone = element.cloneNode(true);
+      clone.removeAttribute("id");
+      clone.setAttribute("aria-hidden", "true");
+
+      clone.querySelectorAll("img").forEach(image => {
+        image.alt = "";
+        handleGalleryImage(image);
+      });
+
+      return clone;
+    }
+
+    function updateGalleryControls() {
+      galleryWindow.classList.toggle("is-paused", galleryPaused);
+
+      galleryToggle.setAttribute(
+        "aria-pressed",
+        String(galleryPaused)
+      );
+
+      galleryToggle.textContent = galleryPaused
+        ? "Resume slideshow"
+        : "Pause slideshow";
+    }
+
+    function buildGalleryLoop() {
+      galleryWindow.classList.remove("is-animated");
+
+      galleryRows.forEach(row => {
+        row.track.querySelectorAll("[data-gallery-clone]").forEach(
+          clone => clone.remove()
+        );
+
+        row.group.querySelectorAll("[data-gallery-filler]").forEach(
+          filler => filler.remove()
+        );
+      });
+
+      const hasPhotos = galleryRows.some(
+        row => row.group.childElementCount > 0
+      );
+
+      if (!hasPhotos) {
+        galleryToggle.hidden = true;
+        galleryHelp.textContent = "More cake photographs coming soon.";
+        return;
+      }
+
+      if (reducedMotion.matches) {
+        galleryToggle.hidden = true;
+        galleryHelp.textContent =
+          "Swipe or scroll each row sideways to explore our cake creations.";
+        return;
+      }
+
+      let animatedRows = 0;
+
+      galleryRows.forEach(row => {
+        const originals = Array.from(row.group.children);
+
+        if (!originals.length) return;
+
+        const originalWidth = row.group.getBoundingClientRect().width;
+
+        if (originalWidth <= 0) return;
+
+        const requiredWidth = galleryWindow.clientWidth + 400;
+
+        const repeatCount = Math.max(
+          1,
+          Math.ceil(requiredWidth / originalWidth)
+        );
+
+        for (let repeat = 1; repeat < repeatCount; repeat++) {
+          originals.forEach(item => {
+            const filler = createGalleryClone(item);
+            filler.dataset.galleryFiller = "true";
+            row.group.appendChild(filler);
+          });
+        }
+
+        const duplicate = createGalleryClone(row.group);
+        duplicate.dataset.galleryClone = "true";
+
+        row.track.appendChild(duplicate);
+
+        /*
+          Change this value to adjust speed:
+          25 = slower
+          35 = current speed
+          50 = faster
+        */
+        const pixelsPerSecond = 35;
+
+        const halfWidth = row.group.getBoundingClientRect().width;
+        const duration = Math.max(25, halfWidth / pixelsPerSecond);
+
+        row.track.style.setProperty(
+          "--gallery-duration",
+          duration + "s"
+        );
+
+        row.track.parentElement.scrollLeft = 0;
+        animatedRows++;
+      });
+
+      if (!animatedRows) {
+        galleryToggle.hidden = true;
+        return;
+      }
+
+      galleryWindow.classList.add("is-animated");
+      galleryToggle.hidden = false;
+
+      galleryHelp.textContent =
+        "Hover over the gallery or use the pause button to take a closer look.";
+
+      updateGalleryControls();
+    }
+
+    galleryToggle.addEventListener("click", () => {
+      galleryPaused = !galleryPaused;
+      updateGalleryControls();
+    });
+
+    window.addEventListener("resize", () => {
+      cancelAnimationFrame(galleryResizeFrame);
+      galleryResizeFrame = requestAnimationFrame(buildGalleryLoop);
+    });
+
+    reducedMotion.addEventListener("change", buildGalleryLoop);
+
+    buildGalleryLoop();
+
+    /* ==========================================================
+       CUSTOMER REVIEW CARDS
+       ========================================================== */
+
+    const reviewList = document.getElementById("review-list");
+    const reviewsEmpty = document.getElementById("reviews-empty");
+
+    function safeReviewUrl(value) {
+      if (typeof value !== "string" || !value.trim()) {
+        return null;
+      }
+
+      try {
+        const url = new URL(value);
+
+        return url.protocol === "https:"
+          ? url.href
+          : null;
+      } catch {
+        return null;
+      }
+    }
+
+    customerReviews.forEach(review => {
+      if (
+        !review ||
+        typeof review.name !== "string" ||
+        typeof review.text !== "string" ||
+        !review.name.trim() ||
+        !review.text.trim()
+      ) {
+        return;
+      }
+
+      const card = document.createElement("article");
+      card.className = "card review-card";
+
+      const body = document.createElement("div");
+      body.className = "card-body";
+
+      const rating = Number(review.rating);
+
+      if (
+        Number.isInteger(rating) &&
+        rating >= 1 &&
+        rating <= 5
+      ) {
+        const stars = document.createElement("div");
+        stars.className = "review-stars";
+        stars.setAttribute("role", "img");
+        stars.setAttribute(
+          "aria-label",
+          rating + " out of 5 stars"
+        );
+
+        stars.textContent =
+          "★".repeat(rating) +
+          "☆".repeat(5 - rating);
+
+        body.appendChild(stars);
+      }
+
+      const quote = document.createElement("blockquote");
+      quote.className = "review-quote";
+      quote.textContent = review.text;
+
+      if (review.lang === "bn" || review.lang === "en") {
+        quote.lang = review.lang;
+      }
+
+      const author = document.createElement("div");
+      author.className = "review-author";
+
+      const name = document.createElement("strong");
+      name.textContent = review.name;
+      author.appendChild(name);
+
+      if (
+        typeof review.date === "string" &&
+        /^\d{4}-\d{2}-\d{2}$/.test(review.date)
+      ) {
+        const parsedDate =
+          new Date(review.date + "T00:00:00Z");
+
+        if (
+          !Number.isNaN(parsedDate.getTime()) &&
+          parsedDate.toISOString().slice(0, 10) === review.date
+        ) {
+          const dateLine = document.createElement("small");
+          const time = document.createElement("time");
+
+          time.dateTime = review.date;
+
+          time.textContent = parsedDate.toLocaleDateString(
+            "en-IN",
+            {
+              month: "long",
+              year: "numeric",
+              timeZone: "UTC"
+            }
+          );
+
+          dateLine.appendChild(time);
+          author.appendChild(dateLine);
+        }
+      }
+
+      const sourceUrl = safeReviewUrl(review.url);
+
+      const sourceName =
+        typeof review.source === "string"
+          ? review.source.trim()
+          : "";
+
+      if (sourceUrl) {
+        const source = document.createElement("a");
+        source.className = "text-link review-source";
+        source.href = sourceUrl;
+        source.target = "_blank";
+        source.rel = "noopener noreferrer";
+
+        source.textContent = sourceName
+          ? "Read on " + sourceName + " ↗"
+          : "Read original review ↗";
+
+        author.appendChild(source);
+      } else if (sourceName) {
+        const source = document.createElement("small");
+        source.textContent = sourceName;
+        author.appendChild(source);
+      }
+
+      body.append(quote, author);
+      card.appendChild(body);
+      reviewList.appendChild(card);
+    });
+
+    reviewsEmpty.hidden = reviewList.childElementCount > 0;
+
+    /* ==========================================================
+       FOOTER YEAR
+       ========================================================== */
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
